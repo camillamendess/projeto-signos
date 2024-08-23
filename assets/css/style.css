@@ -1,0 +1,59 @@
+body {
+	background: linear-gradient(to bottom, #0a3049, #3686bb);
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.container {
+	padding-top: 100px;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+}
+
+.text-center {
+	color: #fff;
+	padding-bottom: 30px;
+	font-size: 32px;
+}
+
+#signo-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+}
+
+.form-group {
+	width: 300px;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+}
+
+.form-group label {
+	color: #fff;
+	padding: 10px 0;
+	text-align: center;
+}
+
+.btn {
+	background-color: #0b324d;
+	border: none;
+	padding: 10px;
+}
+
+.btn:hover {
+	background-color: #031a29;
+}
+
+.text-signo {
+	color: #fff;
+	padding-bottom: 30px;
+	font-size: 40px;
+	text-align: center;
+	letter-spacing: 2.5px;
+}
