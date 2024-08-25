@@ -6,8 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Descubra seu signo</title>
-    <!-- Inclui o CSS personalizado -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
     <div class="container mt-5">
@@ -41,26 +40,14 @@
             if (verificar_signo($data_nascimento_formatada, $signo->dataInicio, $signo->dataFim)) {
                 $signoNome = htmlspecialchars($signo->signoNome);
                 $descricao = htmlspecialchars($signo->descricao);
-                $imagem = "../assets/imgs" . strtolower(str_replace(' ', '_', $signoNome)) . ".png"; // Constrói o nome do arquivo da imagem
                 
                 echo "<h2 class='text-center'>Seu signo é: $signoNome</h2>";
                 echo "<p class='text-center'>$descricao</p>";
                 
-                // Exibe a imagem do signo, se o arquivo existir
-                if (file_exists($imagem)) {
-                    echo "<div class='text-center'><img src='$imagem' alt='$signoNome' class='img-fluid' style='max-width: 300px;'></div>";
-                } else {
-                    echo "<p class='text-center'>Imagem não disponível.</p>";
-                }
-                
-                echo "<p class='text-center'><a href='index.php' class='btn btn-secondary mt-3'>Voltar à Página Inicial</a></p>";
+                echo "<p class='text-center'><a href='../index.php' class='btn btn-secondary mt-3'>Voltar à Página Inicial</a></p>";
                 $signo_encontrado = true;
                 break;
             }
-        }
-
-        if (!$signo_encontrado) {
-            echo "<p class='text-center'>Não foi possível determinar seu signo com base na data fornecida.</p>";
         }
         ?>
     </div>
